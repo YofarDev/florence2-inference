@@ -23,8 +23,8 @@ def fixed_get_imports(filename: str | os.PathLike) -> list[str]:
 # Function to download and load the Florence-2 model
 def download_and_load_model(model_name):
     print('Checking device...')
-    #device = 'cuda' if torch.cuda.is_available() else 'cpu'
-    device = 'cpu'
+    device = 'cuda' if torch.cuda.is_available() else 'cpu'
+    #device = 'cpu'
     print(f'Device available : {device}')
     model_path = os.path.join("models", model_name.replace('/', '_'))
     if not os.path.exists(model_path):
